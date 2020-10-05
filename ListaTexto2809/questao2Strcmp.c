@@ -1,23 +1,27 @@
 #include <stdio.h>
-#include <string.h>
+
+
+int strcmp ( const char * stA, const char * stB ) {
+    int i;
+    for (i = 0; stA[i] != '\0'; i++){
+        if (stA[i] == stB[i]) {
+            continue;
+        } else {
+            if (stA[i] > stB[i]) {
+                return 1;
+            } else {
+                return -1;
+            }
+        }
+    }
+    return 0;    
+}
+
 
 int main() {
-
-    char stA[90], stB[90];
-
-    while(1) {
-        printf("\nDigite uma frase [max 90 char] ou digete / para sair do prog: ");
-        gets(stA);
-        if (stA[0] != '/') {
-            printf("\nDigite outra frase: ");
-            gets(stB);
-            if (strcmp(stA, stB)) {
-                printf("\nSao diferentes\n");                
-            } else {
-                printf("\nSao iguais\n");
-            }
-        } else {
-            return printf("Fim do prog\n");
-        }  
-    }
+    char stA[100], stB[100];
+    gets(stA);
+    gets(stB);
+    printf("%d\n", strcmp(stA, stB));
+    return 0;
 }

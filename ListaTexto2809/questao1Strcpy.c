@@ -1,17 +1,23 @@
 #include <stdio.h>
-#include <string.h>
+
+
+char * strcpy( char * destination, const char * source ) {
+    int i; 
+    for (i = 0; source[i] != '\0'; i++) {
+        destination[i] = source[i];
+    }
+    destination[i] = '\0';
+
+    return destination;
+}
+
 
 int main () {
   
-    char st[90], stCopia[90];
-    while(1) {
-        printf("\nDigite um frase [max 90char] ou digite / para sair do prog: ");
-        gets(st);
-        if (st[0] == '/') {
-            return printf("\nFim do programa");
-        } else {
-            strcpy(stCopia, st);
-            printf("\nFoi digitado: %s\n", stCopia);
-        }
-    }
+    char st[100], stCopy[100];
+    int i;
+    gets(st);
+    strcpy(stCopy, st);
+    printf("%s\n", stCopy);
+    return 0;
 } 
