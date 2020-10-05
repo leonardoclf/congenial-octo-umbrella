@@ -15,7 +15,7 @@ char * strcpy( char * destination, const char * source ) {
 int main () {
   
     char st[100], stCopy[100];
-    int i;
+    
     gets(st);
     strcpy(stCopy, st);
     printf("%s\n", stCopy);
