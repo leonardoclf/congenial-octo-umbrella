@@ -3,19 +3,6 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
-/*
-Cria uma conta
-Consulta o saldo do cliente
-Deposita um valor(entra com o numero da conta e confere o nome do cliente)
-Saca um valor(entra com o num da conta e confere senha e chave, o cliente tem apaneas autorizaao de sacarr)
-Encerre a conta
-
-Chave: xqa 
-
-FUNC BASICA OK
-REFATORAR EM FUNC ...
-*/
-
 
 // FUNC DE MSG DE MENU PARA USER 
 void menuInicial() {
